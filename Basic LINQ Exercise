@@ -1,1 +1,24 @@
 Hello LINQ....!
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+					
+public class Program
+{
+	public static void Main()
+	{
+		// Find the words in the collection that start with the letter 'L'
+		List<string> fruits = new List<string>() { "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry" };
+		
+		//Query for select 
+		IEnumerable<string> Llist=from fruit in fruits where fruit[0]=='L' select fruit;
+		//Display result
+		foreach (string s in Llist )
+		{
+			Console.WriteLine("Fruit Name start with L is  :" + s);
+		}
+									
+
+	}
+}
