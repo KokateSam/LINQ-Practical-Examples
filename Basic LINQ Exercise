@@ -12,9 +12,11 @@ public class Program
 		List<string> fruits = new List<string>() { "Lemon", "Apple", "Orange", "Lime", "Watermelon", "Loganberry" };
 		
 		//Query for select 
-		IEnumerable<string> Llist=from fruit in fruits where fruit[0]=='L' select fruit;
+		//IEnumerable<string> Llist=from fruit in fruits where fruit[0]=='L' select fruit;
+		IEnumerable <string> Lfruits=fruits.Where(f=>f[0]=='L');
 		//Display result
-		foreach (string s in Llist )
+		//Llist
+		foreach (string s in Lfruits )
 		{
 			Console.WriteLine("Fruit Name start with L is  :" + s);
 		}
